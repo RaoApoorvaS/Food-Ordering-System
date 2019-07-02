@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script type="text/javascript">
+function getSum()
+{
+totalvalue=0
+obj=document.myform.chkbox
+for(i=0;i<obj.length;i++)
+{
+if(obj[i].checked)
+{
+totalvalue+=parseInt(obj[i].value)
+}
+
+}
+
+if(totalvalue==0)
+{
+alert("Please select atleast one item!!");
+document.myform.totalsum.value=""
+}
+else
+{
+document.myform.totalsum.value=totalvalue
+}
+
+}
+
+		</script>
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.imgContainer{
+    display:inline-block;
+}
+</style>
+</head>
+<body>
+<div class="image123">
+    <div class="imgContainer">
+        <img src="https://files.hungryforever.com/wp-content/uploads/2015/05/dosa.jpg" height="200" width="400"/>
+        <p>Dosa</p>
+    </div>
+    <div class="imgContainer">
+        <img class="middle-img" src="https://qph.fs.quoracdn.net/main-qimg-d9840de6e02029c9d882535b1d131260"/ height="200" width="400"/>
+        <p>Idli</p>
+    </div>
+    <div class="imgContainer">
+         <img src="https://www.thenewsminute.com/sites/all//var/www//images/South-breakfast1.JPG"/ height="200" width="400"/>
+        <p>Upma</p>
+    </div>
+</div>
+<h1>Menu Card</h1>
+ <table style="width:100%" border="white" align=center >
+  <tr>
+    <th>Sr no.</th>
+    <th>Menu name</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Plain dosa</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Masala dosa</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Cut dosa</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Uttapa</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Idli</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Idli Vada</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Fried Idli</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Plain Appe</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Masala Appe</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Upma</td>
+    <td>20</td>
+  </tr>
+</table> 
+<p>Select your order</p>
+<form name="myform">
+<input type="checkbox" name="chkbox"  value="20"> Plain dosa
+<input type="checkbox" name="chkbox"  value="30"> Masala dosa
+<input type="checkbox" name="chkbox"  value="30"> Cut dosa
+<input type="checkbox" name="chkbox"  value="30"> Uttapa
+<input type="checkbox" name="chkbox"  value="25"> Idli
+<input type="checkbox" name="chkbox"  value="35"> Idli Vada
+<input type="checkbox" name="chkbox"  value="25"> Fried Idli
+<input type="checkbox" name="chkbox"  value="20"> Plain Appe
+<input type="checkbox" name="chkbox"  value="30"> Masala Appe
+<input type="checkbox" name="chkbox"  value="20"> Upma<br>
+Amount to be paid:<input type=text name="totalsum" readonly>
+<input type=button onclick="getSum()" value="Get Total Price"><br>
+<a href="./new_page1.html">Proceed to pay</a>
+</body>
+</html>
+
